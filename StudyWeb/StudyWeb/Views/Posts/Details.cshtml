@@ -1,0 +1,107 @@
+﻿@model StudyWeb.Models.Posts
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Posts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.contentPosts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contentPosts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagePosts1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagePosts1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagePosts2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagePosts2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagePosts3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagePosts3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagePosts4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagePosts4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datePost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datePost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.countLike)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.countLike)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.countComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.countComment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.display)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account.fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account.fullname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

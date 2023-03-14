@@ -1,0 +1,49 @@
+﻿@model StudyWeb.Models.Chapter
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header" style="background-color: aqua;">
+        <div class="row">
+            <strong class="text-uppercase">Chi tiết chương môn học</strong>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h4>Chapter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.chapterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chapterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.display)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subjects.subjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subjects.subjectName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

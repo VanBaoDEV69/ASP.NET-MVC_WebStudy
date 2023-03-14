@@ -1,0 +1,94 @@
+﻿@model IEnumerable<StudyWeb.Models.Comment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contentComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageComment1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageComment2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageComment3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageComment4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.likeComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.display)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Account.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Posts.contentPosts)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contentComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageComment1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageComment2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageComment3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageComment4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.likeComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.display)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Account.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Posts.contentPosts)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

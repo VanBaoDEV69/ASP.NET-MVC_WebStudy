@@ -1,0 +1,163 @@
+﻿@model StudyWeb.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.question1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.question1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageQuestion1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageQuestion1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageQuestion2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageQuestion2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageQuestion3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageQuestion3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageQuestion4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageQuestion4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.answer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.answer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.answer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.answer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.answer3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.answer3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.answer4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.answer4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correctAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correctAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageAnswer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageAnswer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageAnswer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageAnswer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageAnswer3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageAnswer3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageAnswer4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageAnswer4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.display)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test.nameTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test.nameTest)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<StudyWeb.Models.Video>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nameVideo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.describe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.linkVideo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateUpload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.countLike)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.countComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.display)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subjects.subjectName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameVideo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.describe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.linkVideo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateUpload)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.countLike)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.countComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.display)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subjects.subjectName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
